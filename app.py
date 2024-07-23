@@ -52,8 +52,8 @@ def classify_image(image):
     emoji = {"Safe": "✅", "Questionable": "⚠️", "Unsafe": "🔞"}.get(category, "❓")
     confidence_bar = "🟩" * int(confidence_value // 10) + "⬜" * (10 - int(confidence_value // 10))
     
-    result = f"{emoji} NSFW Category: {category}\n"
-    result += f"🏷️ Model Label: {label}\n"
+    #result = f"{emoji} NSFW Category: {category}\n"
+    result = f"🏷️ Model Label: {label}\n"
     result += f"🎯 Confidence: {confidence_value:.2f}% {confidence_bar}"
 
     return result
